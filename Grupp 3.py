@@ -5,7 +5,7 @@ Created on Wed Dec  9 16:14:56 2020
 @author: Sofia
 """
 
-
+#Modellering över våren 2020, startdatum 31 januari (första fallet) slutdatum 30 juni
 
 #%%
 from scipy.integrate import odeint
