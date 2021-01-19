@@ -10,18 +10,18 @@ import matplotlib.pyplot as plt
 def deriv(y, t, N, beta, gamma, delta):
     S, E, I, R = y
     
-    if t < 29+14:
+    if t < 29+14:               #Mellan 31 januari och 14 mars
         beta = beta_start
         
-    elif 29+14 < t < 29+17:
+    elif 29+14 < t < 29+17:     #Mellan 14 mars och 17 mars
         beta = beta_res
         
     
-    elif 29+17 < t < 29+27:
+    elif 29+17 < t < 29+27:     #Mellan 17 mars och 27 mars
         beta = beta_skol
         
         
-    elif 29+27 < t:
+    elif 29+27 < t:             #Efter 27 mars
         beta = beta_50
         
     dSdt = -beta * S * I / N
@@ -67,7 +67,7 @@ S, E, I, R = ret.T #delar upp resultatet i fyra separata delar
 
 def plotsir(t, S, E, I, R):
   f, ax = plt.subplots(1,1,figsize=(10,4))
-  # ax.plot(t, S, 'b', alpha=0.7, linewidth=2, label='Susceptible')
+  # ax.plot(t, S, 'b', alpha=0.7, linewidth=2, label='Susceptible')     #Visas inte för att man ska se skillnaderna i de andra graferna
   ax.plot(t, E, 'y', alpha=0.7, linewidth=2, label='Exposed')
   ax.plot(t, I, 'r', alpha=0.7, linewidth=2, label='Infected')
   ax.plot(t, R, 'g', alpha=0.7, linewidth=2, label='Recovered')
