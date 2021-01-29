@@ -45,6 +45,7 @@ beta_res = 2.8*gamma     #reserestriktioner
 beta_skol = 1.5*gamma    #nedstängning av skolor
 beta_50 = 0.6*gamma      #gräns på 50 personer  
 delta = 1/5              #fem inkubationsdagar enligt https://www.folkhalsomyndigheten.se/smittskydd-beredskap/utbrott/aktuella-utbrott/covid-19/fragor-och-svar/      
+beta = 2.5
 
 # initial conditions: one infected, rest susceptible
 S0 = N-70
